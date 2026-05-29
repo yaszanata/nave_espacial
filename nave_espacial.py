@@ -1,5 +1,5 @@
 ##variáveis globais
-combustivel = 100
+combustivel =  110
 tripulantes = []
 
 ##funções
@@ -18,7 +18,7 @@ def viajar(): ##gasto de combustível
 def abastecer(): ##ganho de combustível
     global combustivel
 
-    combustivel = 100 
+    combustivel = 110 
     print(f"\nTanque abastecido⛽!")
 
 
