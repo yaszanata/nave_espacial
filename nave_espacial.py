@@ -36,6 +36,17 @@ def registrarTripulante():
     print("Novo tripulante inserido com sucesso!! 🧑🏻‍🚀\n")
 
 
+def removerTripulante():
+    global tripulantes
+
+    if len(tripulantes) == 0:
+        print("\nNão há tripulantes na nave!")
+    
+    else:
+        tripulantes.pop()
+        print(f"\nOs tripulantes restantes são: {tripulantes}")
+
+
 
 ##Criar um menu
 
@@ -45,7 +56,7 @@ print("Selecione um aopção:")
 while True: ##roda para sempre
     # print("Bem vindo a nave espacial! 🚀")
    
-    print("\n1- Mostrar status da nave \n2- Viajar  \n3- Abastecer \n4- Adicionar novo tripulante  \n5- Sair do menu")
+    print("\n1- Mostrar status da nave \n2- Viajar  \n3- Abastecer \n4- Adicionar novo tripulante \n5- Remover o último tripulante inserido  \n6- Sair do menu")
 
     opcao = input("R: ")
     
@@ -62,6 +73,9 @@ while True: ##roda para sempre
         registrarTripulante()
 
     elif opcao == "5":
+        removerTripulante()
+
+    elif opcao == "6":
         print("Viagem encerrada!")
         break
 
