@@ -17,6 +17,8 @@ def viajar(): ##gasto de combustível
     else:
         print("\nCombustível insufuciente. Abasteça! ⚠️")
 
+    travarMenu()
+
 
 def abastecer(): ##ganho de combustível
     global combustivel
@@ -24,6 +26,7 @@ def abastecer(): ##ganho de combustível
     combustivel = 100 
     print(f"\nTanque abastecido⛽!")
 
+    travarMenu()
 
 def status_nave(): ##quantidade de combustível e tripulantes
 
@@ -31,6 +34,7 @@ def status_nave(): ##quantidade de combustível e tripulantes
     print(f"Temos {combustivel}L de combustível.")
     print(f"Tripulantes da nave: {tripulantes}\n")
 
+    travarMenu()
 
 def registrarTripulante():
 
@@ -38,6 +42,7 @@ def registrarTripulante():
     tripulantes.append(novoTripulante)
     print("Novo tripulante inserido com sucesso!! 🧑🏻‍🚀\n")
 
+    travarMenu()
 
 def removerTripulante():
     global tripulantes
@@ -48,8 +53,12 @@ def removerTripulante():
     else:
         tripulantes.pop()
         print(f"\nOs tripulantes restantes são: {tripulantes}")
+        
+    travarMenu()
 
-
+#função p/ pausar o código entre as interações
+def travarMenu():
+    input("\nPressione <ENTER> para continuar...")
 
 ##Criar um menu
 
